@@ -7,10 +7,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--main-font);
-    font-weight: var(--font-normal);
+    
 }
 body{
+    font-family: var(--main-font);
+    font-weight: var(--font-normal);
     height: 100vh;
     /* overflow: hidden; */
     display: flex;
@@ -31,7 +32,6 @@ body{
     border-radius: 12px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-radius: 12px;
 }
 .img img{
     max-width: 100%;
@@ -43,6 +43,9 @@ body{
   background-color: var(--white);
   border-radius: 0 12px 12px 0;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 h5{
     text-transform: uppercase;
@@ -52,15 +55,15 @@ h5{
 h1{
     line-height: 1;
     font-size: 40px;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 p{
     color: var(--dark-grayish-blue);
-    margin-top: 1.7rem;
+    margin-top: 1./7rem;
     line-height: 1.6;
 }
 h2{
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     
     color: var(--dark-cyan);
     font-size: 32px;
@@ -74,9 +77,10 @@ h2 span{
 .button-container{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 button{
+    cursor: pointer;
     color: var(--white);
     background-color: var(--dark-cyan);
     font-weight: var(--font-bold);
@@ -96,6 +100,26 @@ button:active{
     background-color: hsl(158, 36%, 17%);
 }
 
+@media screen and
+(max-width: 600px) {
+    .container{
+        max-width: 375px;
+        grid-template-columns: 1fr;
+    }
+    .img img{
+        border-radius: 12px 12px 0 0;
+        max-height: 400px;
+        width: 100%;
+    }
+    .info{
+        border-radius: 0 0 12px 12px;
+        display: block;
+        margin-top: -1%;
+    }
+    h1,h2,h5,p{
+        padding-bottom: 1.5rem;
+    }
+}
 
 
 
